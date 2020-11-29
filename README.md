@@ -1,6 +1,8 @@
 # World Power Stations
 
-This is a [Pokédex](https://pokedex.org)-like encyclopedia of worldwide power stations.
+[Pokédex](https://pokedex.org)-like encyclopedia of worldwide power stations.
+
+⚠️ _Warning:_ this is a portfolio project and thus has limited features.
 
 @todo talk about its goal (showcase skill - work w/ legacy code, progressive upgrade)
 
