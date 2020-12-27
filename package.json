@@ -1,13 +1,14 @@
 {
   "name": "world-power-stations",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gulp build && node --harmony_sloppy_let --harmony_destructuring $(npm bin -g)/surge dist/prod world-power-stations.surge.sh"
   },
   "author": "Thiago Villa <thiagovilla89@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "del": "2.0.2",
     "event-stream": "3.3.2",
@@ -36,8 +37,5 @@
     "jshint-stylish": "2.0.1",
     "main-bower-files": "2.9.0"
   },
-  "dependencies": {
-    "dotenv": "1.2.0",
-    "express": "4.13.3"
-  }
+  "dependencies": {}
 }
