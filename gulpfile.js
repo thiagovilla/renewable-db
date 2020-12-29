@@ -123,7 +123,7 @@ pipes.validateTemplates = function () {
     .pipe(plugins.htmlhint.reporter());
 };
 
-// move html teampltes into the dev environment
+// move html templates into the dev environment
 pipes.buildDevTemplates = function () {
   return pipes.validateTemplates().pipe(gulp.dest(paths.devDist));
 };
@@ -134,7 +134,7 @@ pipes.scriptTemplates = function () {
     .validateTemplates()
     .pipe(plugins.htmlhint.failReporter())
     .pipe(plugins.htmlmin({ collapseWhitespace: true, removeComments: true }))
-    .pipe(plugins.ngHtml2js({ moduleName: "templatesModule" }));
+    .pipe(plugins.ngHtml2js({ moduleName: "app" }));
 };
 
 // index

@@ -5,6 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "gulp && http-server dist/dev -c-1",
     "deploy": "gulp build && node --harmony_sloppy_let --harmony_destructuring $(npm bin -g)/surge dist/prod world-power-stations.surge.sh"
   },
   "author": "Thiago Villa <thiagovilla89@gmail.com>",
@@ -33,6 +34,7 @@
     "gulp-sass": "2.1.0",
     "gulp-sourcemaps": "1.6.0",
     "gulp-uglify": "1.4.2",
+    "http-server": "0.12.3",
     "jshint": "2.11.0",
     "jshint-stylish": "2.0.1",
     "main-bower-files": "2.9.0"
