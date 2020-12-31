@@ -9,3 +9,10 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - sleep 3
 script: node --harmony_sloppy_let --harmony_destructuring $(npm bin)/karma start --single-run
+before_deploy:
+  - npm i -g gulp
+  - gulp build
+deploy:
+  provider: surge
+  project: dist/prod
+  cleanup: false
