@@ -1,4 +1,5 @@
 language: node_js
+dist: trusty # Ubuntu 14.04
 before_script:
   - npm i -g bower
   - bower install
