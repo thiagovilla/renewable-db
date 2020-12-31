@@ -1,15 +1,16 @@
 language: node_js
 dist: trusty # Ubuntu 14.04
 before_script:
-  - npm i -g bower
-  - bower install
+  - npm i -g -q bower
+  - bower install -q
 
   # set up xvfb to run GUI tests
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - sleep 3
+script: node --harmony_sloppy_let --harmony_destructuring $(npm bin)/karma start --single-run
 before_deploy:
-  - npm i -g gulp
+  - npm i -g -q gulp
   - gulp build
 deploy:
   provider: surge

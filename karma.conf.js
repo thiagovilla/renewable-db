@@ -30,7 +30,7 @@ module.exports = function(config) {
 
     browsers: ['Firefox'],
 
-    singleRun: true,
+    singleRun: false,
 
     concurrency: Infinity,
 
