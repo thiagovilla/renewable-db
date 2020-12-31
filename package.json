@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node --harmony_sloppy_let --harmony_destructuring $(npm bin)/karma start",
     "develop": "gulp && http-server dist/dev -c-1",
-    "deploy": "gulp build && node --harmony_sloppy_let --harmony_destructuring $(npm bin -g)/surge dist/prod https://world-power-stations.surge.sh"
+    "deploy": "gulp build && SURGE_DOMAIN=$(< CNAME) node --harmony_sloppy_let --harmony_destructuring $(npm bin -g)/surge dist/prod $SURGE_DOMAIN"
   },
   "author": "Thiago Villa <thiagovilla89@gmail.com>",
   "license": "MIT",

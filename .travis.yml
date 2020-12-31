@@ -10,6 +10,5 @@ before_script:
   - sleep 3
 script: node --harmony_sloppy_let --harmony_destructuring $(npm bin)/karma start --single-run
 after_script:
-  - npm i -g -q gulp
-  - gulp build
-  - node --harmony_sloppy_let --harmony_destructuring $(npm bin -g)/surge --token $(SURGE_TOKEN) dist/prod https://world-power-stations.surge.sh
+  - npm i -g -q gulp surge
+  - npm run deploy
