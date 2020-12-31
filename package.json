@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "test": "node --harmony_sloppy_let --harmony_destructuring $(npm bin)/karma start",
+    "test": "node --harmony_sloppy_let --harmony_destructuring $(npm bin)/karma start --no-single-run",
     "develop": "gulp && http-server dist/dev -c-1",
     "deploy": "gulp build && node --harmony_sloppy_let --harmony_destructuring $(npm bin -g)/surge dist/prod https://world-power-stations.surge.sh"
   },
