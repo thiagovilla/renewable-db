@@ -9,11 +9,7 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - sleep 3
 script: node --harmony_sloppy_let --harmony_destructuring $(npm bin)/karma start --single-run
-before_deploy:
+after_script:
   - npm i -g -q gulp
   - gulp build
-deploy:
-  provider: surge
-  project: dist/prod
-  domain: https://world-power-stations.surge.sh
-  cleanup: false
+  - node --harmony_sloppy_let --harmony_destructuring $(npm bin -g)/surge --token $(SURGE_TOKEN) dist/prod https://world-power-stations.surge.sh
