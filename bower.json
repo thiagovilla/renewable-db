@@ -1,12 +1,23 @@
 {
   "name": "world-power-stations",
-  "authors": ["Thiago Villa <thiagovilla89@gmail.com>"],
+  "authors": [
+    "Thiago Villa <thiagovilla89@gmail.com>"
+  ],
   "description": "",
   "main": "src/app.js",
   "license": "MIT",
   "homepage": "",
-  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "angular": "1.2.32"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.32"
   }
 }

@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --harmony_sloppy_let --harmony_destructuring $(npm bin)/karma start",
     "develop": "gulp && http-server dist/dev -c-1",
     "deploy": "gulp build && node --harmony_sloppy_let --harmony_destructuring $(npm bin -g)/surge dist/prod world-power-stations.surge.sh"
   },
@@ -37,6 +37,10 @@
     "http-server": "0.12.3",
     "jshint": "2.11.0",
     "jshint-stylish": "2.0.1",
+    "karma": "1.1.0",
+    "karma-firefox-launcher": "2.1.0",
+    "karma-jasmine": "4.0.1",
+    "karma-ng-html2js-preprocessor": "1.0.0",
     "main-bower-files": "2.9.0"
   },
   "dependencies": {}
