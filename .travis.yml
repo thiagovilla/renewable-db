@@ -15,4 +15,5 @@ before_deploy:
 deploy:
   provider: surge
   project: dist/prod
+  domain: https://world-power-stations.surge.sh
   cleanup: false
