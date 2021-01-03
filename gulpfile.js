@@ -369,7 +369,7 @@ gulp.task("watch-prod", ["clean-build-prod-app"], function () {
 
 // build and default
 
-gulp.task("build", ["clean-build-prod-app"]);
+gulp.task("build", ["clean-prod-env"], pipes.buildProdApp);
 
 gulp.task("default", ["clean-build-dev-app"]);
 
