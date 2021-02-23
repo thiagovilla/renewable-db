@@ -5,9 +5,9 @@ var del = require("del");
 var es = require("event-stream");
 
 var paths = {
-  scripts: ["!./src/**/*.spec.js", "./src/**/*.js"],
-  styles: "./src/**/*.+(css|scss)",
-  templates: "./src/**/*.html",
+  scripts: ["!./app/**/*.spec.js", "./app/**/*.js"],
+  styles: "./app/**/*.+(css|scss)",
+  templates: "./app/**/*.html",
   index: "./public/index.html",
   images: "./public/assets/images/**/*.+(svg|png|gif|jpg|jpeg)",
   static: ["!./public/assets/images/**/*.*", "./public/**/*.*"],
