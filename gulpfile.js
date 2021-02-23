@@ -5,7 +5,7 @@ var del = require("del");
 var es = require("event-stream");
 
 var paths = {
-  scripts: "./src/**/*.js",
+  scripts: ["!./src/**/*.spec.js", "./src/**/*.js"],
   styles: "./src/**/*.+(css|scss)",
   templates: "./src/**/*.html",
   index: "./public/index.html",
