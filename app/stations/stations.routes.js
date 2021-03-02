@@ -6,6 +6,6 @@ function routerConfig($stateProvider) {
   $stateProvider.state({
     name: "stations",
     url: "",
-    template: "<h3>STATIONS!</h3>",
+    templateUrl: "stations/stations.html",
   });
 }
