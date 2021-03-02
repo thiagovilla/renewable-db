@@ -1,4 +1,4 @@
-var app = angular.module("app", ["ui.router", "app.layout"]);
+var app = angular.module("app", ["app.core", "app.layout"]);
 
 app.config(function ($stateProvider) {
   var helloState = {
