@@ -120,6 +120,7 @@ pipes.buildProdStyles = function () {
 pipes.validateTemplates = function () {
   return gulp
     .src(paths.templates)
+    .pipe(plugins.changedInPlace({ firstPass: true }))
     .pipe(plugins.htmlhint({ "doctype-first": false }))
     .pipe(plugins.htmlhint.reporter());
 };
