@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "test": "node --harmony_sloppy_let --harmony_destructuring $(npm bin)/karma start ${CI:+--single-run}",
-    "develop": "gulp && http-server dist/dev -c-1",
+    "develop": "gulp & http-server dist/dev -c-1",
     "deploy": "gulp build && SURGE_DOMAIN=$(< CNAME) node --harmony_sloppy_let --harmony_destructuring $(npm bin -g)/surge dist/prod $SURGE_DOMAIN"
   },
   "author": "Thiago Villa <thiagovilla89@gmail.com>",
@@ -17,6 +17,7 @@
     "gulp-angular-filesort": "1.1.1",
     "gulp-babel": "6.1.0",
     "gulp-cache": "0.4.0",
+    "gulp-changed-in-place": "^2.3.0",
     "gulp-concat": "2.6.0",
     "gulp-htmlhint": "0.3.0",
     "gulp-htmlmin": "1.2.0",

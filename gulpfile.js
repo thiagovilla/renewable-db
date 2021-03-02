@@ -35,6 +35,7 @@ pipes.transpileAppScripts = function () {
 pipes.validateAppScripts = function () {
   return gulp
     .src(paths.scripts)
+    .pipe(plugins.changedInPlace({ firstPass: true }))
     .pipe(pipes.transpileAppScripts())
     .pipe(plugins.jshint())
     .pipe(plugins.jshint.reporter("jshint-stylish"));
@@ -371,6 +372,6 @@ gulp.task("watch-prod", ["clean-build-prod-app"], function () {
 
 gulp.task("build", ["clean-prod-env"], pipes.buildProdApp);
 
-gulp.task("default", ["clean-build-dev-app"]);
+gulp.task("default", ["watch-dev"]);
 
 // heavily based on @paislee/healthy-gulp-angular
